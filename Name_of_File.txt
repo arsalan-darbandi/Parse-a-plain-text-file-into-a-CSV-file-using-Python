@@ -1,0 +1,14 @@
+2016 Jun  8  03:19:18.248  [66]  0x1FFD  
+	Version:           
+	Program Name:      
+	MCN:                
+	Compile Date, Time:
+
+
+2016 Jun  8  03:19:18.078  [00] 
+General Version Response
+	Cmd Code: 0
+	Comp Date:
+	Comp Time: 20:51:56
+	Rel Date: Aug 27 2015
+	Rel Time: 00:00:00
