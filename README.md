@@ -6,7 +6,7 @@ You could find either my python file or jupyter file with the text file.
 
 open and read the txt file.
 ```
-text_file = open("Multi.txt", "r") # Multi is name of my file and Multi.txt must be in the same folder otherwise you have to write the direction of specific file. 
+text_file = open("Name_of_File.txt", "r") # Multi is name of my file and Name_of_File.txt must be in the same folder otherwise you have to write the direction of specific file. 
 ```
 Read each line of text file and save it in lines. 
 ```
@@ -23,22 +23,32 @@ import csv
 ```
 Make a csv file.
 ```
-import csv
+mycsv = csv.writer(open('samsung.csv', 'wb'))
 ```
-Make a csv file.
+Write header for csv file.
 ```
-import csv
+mycsv.writerow(['year', 'month', 'date', 'hour', 'minute', 'second'])
 ```
-Make a csv file.
+This is a function that works in this way that:
+Text file is reading each line and find where it has "2016"
+Then it is finding other parameters for that date. 
+Spliting Date as year, month, day and other parameteres. 
 ```
-import csv
+n = 0
+for line in lines: 
+    n = n + 1
+    if "2016" in line:
+        if "[" in line:
+            date_time = line.split("[")[0]
+            year = date_time.split(" ")[0]
+            month = date_time.split(" ")[1]
+            day = date_time.split("  ")[1]
+            time = date_time.split("  ")[2]
+            hour = time.split(":")[0]
+            minute = time.split(":")[1]
+            second = time.split(":")[2]
 ```
-Make a csv file.
+At the end we save all information for that specific date and then going for other date.             
 ```
-import csv
+mycsv.writerow([year, month, day, hour, minute, second])
 ```
-Make a csv file.
-```
-import csv
-```
-
