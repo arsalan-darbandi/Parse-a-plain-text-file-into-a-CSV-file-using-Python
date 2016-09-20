@@ -23,7 +23,7 @@ import csv
 ```
 Make a csv file.
 ```
-mycsv = csv.writer(open('samsung.csv', 'wb'))
+mycsv = csv.writer(open('OutPut.csv', 'wb'))
 ```
 Write header for csv file.
 ```
