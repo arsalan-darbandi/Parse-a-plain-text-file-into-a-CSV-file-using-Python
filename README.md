@@ -52,3 +52,15 @@ At the end we save all information for that specific date and then going for oth
 ```
 mycsv.writerow([year, month, day, hour, minute, second])
 ```
+
+Recently, I've faced with another example that I used this method. This example, I wanted to change the format of all files from jpeg to jpg.
+```
+import os
+path = '/Users/asikhalaban/Downloads/phone/New' # Define the directery that all files are in. 
+files = os.listdir(path)
+i = 1
+
+for file in files:
+    filename = file.split(".")[0] # Split name of a file based on "." and select first part.
+    os.rename(os.path.join(path, file), os.path.join(path, filename +'.jpg')) # Here rename it the selected name.
+```
